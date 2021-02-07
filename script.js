@@ -10,10 +10,12 @@ function searchFunction(){
         // console.log(data.meals.length);
         if (data.meals == null) {
             document.getElementById('errorMessage').innerHTML = `
-                        <h3 class="empty-meal">Sorry! We couldn't find anything.</h3>
+                        <h3 class="errorMessage text-danger">Sorry! We couldn't find anything.</h3>
                     `
         }
         else{
+            
+
             for(let i=0; i<data.meals.length && i<8; i++){
                 food = data.meals[i].idMeal;
                 title = data.meals[i].strMeal;
@@ -27,8 +29,8 @@ function searchFunction(){
                                     <p class="card-text" style="color:black">${title}</p>
                                 </div>
                             </div>
-                    `
-                }
+                `
+            }
         }   
     })
 }
@@ -46,7 +48,7 @@ const foodDetails = food =>{
     document.getElementById('foodDetails').innerHTML = '';
     document.getElementById('errorMessage').innerHTML = '';
     document.getElementById('foodDetails').innerHTML += `
-    <div  class="card" style="width: 25rem; margin-bottom: 20px">
+    <div  class="card " style="width: 25rem; margin-bottom: 20px">
     <img  src="${food.strMealThumb}" class="card-img-top detailImg" alt="...">
     <div class="card-body overflow-auto" style="height:300px">
         <h5 style="color:black">${food.strMeal} (<em>${food.strArea}</em>)</h5>

@@ -1,5 +1,5 @@
 body{
-    background-color: #62664a;
+    background-color: #606442;
     color: #ffffff;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -7,7 +7,9 @@ body{
     padding-top: 3em;
     padding-bottom: 3em;
 }
-
+.errorMessage{
+    color: red;
+}
 .form-control{
     background-color:rgba(253, 253, 253, 0.863);
     padding: 22px;
@@ -43,11 +45,12 @@ body{
 
 .card{
     height: 100%;
+    border-radius: 10px;
 }
 .detailImg{
     height: 50%;
     border-bottom: 3px solid #62664a;
-    border-radius: 3px;
+    border-radius: 10px;
 }
 
 #inputRecipe{
