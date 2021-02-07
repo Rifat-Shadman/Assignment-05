@@ -1,21 +1,21 @@
 body{
     background-color: #62664a;
     color: #ffffff;
-    /* background-image: url(images/bg-image.png); */
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: top;
-    padding-top: 5em;
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
 
 .form-control{
-    background-color:rgba(255, 255, 255, 0.2);
+    background-color:rgba(253, 253, 253, 0.863);
     padding: 22px;
     border: none;
-    border-radius: 25px;
+    border-radius: 10px;
 }
 .btn{
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 9px 25px;
     background-color: rgb(63, 63, 73);
     color: white;
@@ -25,15 +25,10 @@ body{
     color: white;
     background-color: teal;
 }
-.btn-privious{
-    background: rgba(255, 255, 255, 0.2);
-    color: #ffffff;
-}
-.navbar-toggler {
-    border: none;
-}
+
 .search-box{
     position: relative;
+    
 }
 .search-btn {
     position: absolute;
@@ -46,28 +41,31 @@ body{
     border-radius: 15px;
 }
 
-.details{
+.card{
+    height: 100%;
+}
+.detailImg{
+    height: 50%;
+    border-bottom: 3px solid #62664a;
+    border-radius: 3px;
+}
+
+#inputRecipe{
+    height: 50px;
+}
+#errorMessage{
     text-align: center;
 }
 
-.preview{
-    margin-bottom: 100px;
-}
-
-.single-lyrics{
-    margin-bottom: 100px;
-}
-
-
-.card img{
-    height: 70%;
-}
-
-
-#foodList{
-    padding:  5%;
+#foodDetails, #foodList{
+    padding: 0 5%;
     align-items: center;
     display: grid;
     grid-template-columns: repeat(4,1fr); 
     grid-gap: 15px;
+}
+
+#foodDetails{
+    padding-left: 38%;
+    padding-top: 20px;
 }

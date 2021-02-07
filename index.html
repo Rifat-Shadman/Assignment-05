@@ -10,64 +10,23 @@
 <body>
     
     <div>
-        <!-- <nav class="navbar  navbar-dark my-3">
-            <a class="navbar-brand" href="#">
-                <img src="images/logo.png" alt="Hard Rock Solution">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="images/toggler-icon.svg" alt="">
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="#">Action 1</a>
-                            <a class="dropdown-item" href="#">Action 2</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav> -->
-
-
         <main class="content-area">
             <div class="search-bar col-md-6 mx-auto">
-                <h1 class="text-center">Search Recipe</h1>
+                <h1 class="text-center">Cooking Master Recipes</h1>
                 <div class="search-box my-5">
-                    <input id="inputRecipe" type="text" class="form-control" placeholder="Enter your desired recipe">
+                    <input id="inputRecipe" type="text" class="form-control" placeholder="Search for Meal..." >
                     <button onclick="searchFunction()" id="searchRecipe" class="btn  search-btn">Search</button>
                 </div>
             </div>
             
+            <!-- error handling -->
+            <div id="errorMessage"> </div>
 
+            <!-- showing details of a food item -->
+            <div id="foodDetails"> </div>
 
-            <div id="foodDetails">
-
-            </div>
-            <div id="foodList">
-
-            </div>
-            <!-- === Fancy results === -->
-            <div id="all-results" class="search-result col-md-8 mx-auto py-4">
-                <!-- single result -->
-                
-            </div>
-            <!-- Single Lyrics -->
-            <div id="recipeDetails">
-
-            </div>
-            
-            
-            <ul id="recipeList">
-
-            </ul>
+            <!-- listing matching food -->
+            <div id="foodList">  </div>
 
         </main>
     </div>
