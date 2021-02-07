@@ -1,6 +1,6 @@
 body{
     background-color: #606442;
-    color: #ffffff;
+    color: white;
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: top;
@@ -38,10 +38,7 @@ body{
     right: 0;
     height: 100%;
 }
-.single-result{
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-}
+
 
 .card{
     height: 100%;
@@ -61,7 +58,7 @@ body{
 }
 
 #foodDetails, #foodList{
-    padding: 0 5%;
+    padding: 0 2%;
     align-items: center;
     display: grid;
     grid-template-columns: repeat(4,1fr); 
@@ -69,6 +66,7 @@ body{
 }
 
 #foodDetails{
-    padding-left: 38%;
+    padding-left: 33%;
     padding-top: 20px;
+    padding-bottom: 30px;
 }

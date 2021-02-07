@@ -15,22 +15,24 @@ function searchFunction(){
         }
         else{
             
-
-            for(let i=0; i<data.meals.length && i<8; i++){
-                food = data.meals[i].idMeal;
-                title = data.meals[i].strMeal;
-                thumbNail = data.meals[i].strMealThumb;
-                // console.log(title,thumbNail);
-        
-                document.getElementById('foodList').innerHTML += `
-                            <div onclick="showDetails(${food})" class="card" style="width: 18rem;">
-                                <img  src="${thumbNail}" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text" style="color:black">${title}</p>
-                                </div>
-                            </div>
-                `
-            }
+            var kk = 0;
+            
+            data.meals.forEach(food => {
+                const title = food.strMeal;
+                const thumbNail = food.strMealThumb;
+                const mealID = food.idMeal;
+                if(kk<8){
+                    kk = kk+1;
+                    document.getElementById('foodList').innerHTML += `
+                    <div onclick="showDetails(${mealID})" class="card" style="width: 18rem;">
+                        <img  src="${thumbNail}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text" style="color:black">${title}</p>
+                        </div>
+                    </div>
+                    ` 
+                }
+            })
         }   
     })
 }
@@ -48,7 +50,7 @@ const foodDetails = food =>{
     document.getElementById('foodDetails').innerHTML = '';
     document.getElementById('errorMessage').innerHTML = '';
     document.getElementById('foodDetails').innerHTML += `
-    <div  class="card " style="width: 25rem; margin-bottom: 20px">
+    <div  class="card " style="width: 30rem; margin-bottom: 20px">
     <img  src="${food.strMealThumb}" class="card-img-top detailImg" alt="...">
     <div class="card-body overflow-auto" style="height:300px">
         <h5 style="color:black">${food.strMeal} (<em>${food.strArea}</em>)</h5>
@@ -69,7 +71,6 @@ const foodDetails = food =>{
         <h5 style="color:black">Instructions: </h5>
         <p style= "color:black">${food.strInstructions} </p>
     </div>
-    </div>
-`
+    </div> `
 }
 
